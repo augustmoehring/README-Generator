@@ -6,7 +6,7 @@
 
 ## Table of Contents
   
-  Installation,Usage,License,Tests,FAQ
+  Installation,Usage,Contribution,License
 
 ## Installation
   
@@ -14,19 +14,11 @@
 
 ## Usage
   
-   Answer the questions as they appear on the screen
+  Answer the questions as they appear in the terminal. When all the questions have been answered the README will be automatically generated and downloaded to your computer.  
 
 ## Contribution
 
-  ME
- 
-## Tests:
-  
-  IDK
-
-## FAQ:
-
-  IDK
+  Myself
   
 ## License
 
