@@ -39,7 +39,7 @@ const questions = () => {
       type: 'input',
       name: 'Contributing',
       message: 'Who contributed to the project?',
-      },
+    },
     {
       type: 'input',
       name: 'Tests',
@@ -49,14 +49,45 @@ const questions = () => {
       type: 'input',
       name: 'Questions',
       message: 'What are some frequently asked questions with your project?',
-      },
+    },
   ])
 }
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = ({ Title, Description, TableOfContents, Installation, Usage, License, Contributing, Tests, Questions,   }) =>
+  `# ${Title}
 
+  ## Description
+  ${Description}
+
+  ## Table of Contents:
+  ${TableOfContents}
+
+  ## Installation:
+  ${Installation}
+
+  ## Usage:
+  ${Usage}
+
+  ## License
+  ${License}
+
+  ## Contribution:
+  ${Contributing}
+ 
+  ## Tests:
+  ${Tests}
+
+  ## FAQ:
+  ${Questions}
+  
+  ## License:
+  ${License}`;
 // TODO: Create a function to initialize app
-function init() {}
-
+const init = () => {
+  questions()
+    .then((answers) => writeFile('README.md', writeToFile(answers)))
+    .then(() => console.log('Successfully wrote your README'))
+    .catch((err) => console.error(err));
+};
 // Function call to initialize app
 init();
