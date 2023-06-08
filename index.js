@@ -16,9 +16,12 @@ const questions = () => {
       message: 'Input a description for your project.',
     },
     {
-      type: 'input',
+      type: 'checkbox',
       name: 'TableOfContents',
-      message: 'Input a table of contents for your project.',
+      message: 'What do you want inclued in your Table of Contents?',
+      choices: [
+        'Installation', 'Usage', 'License', 'Tests', 'FAQ'
+      ],
     },
     {
       type: 'input',
@@ -54,33 +57,38 @@ const questions = () => {
 }
 // TODO: Create a function to write README file
 const writeToFile = ({ Title, Description, TableOfContents, Installation, Usage, License, Contributing, Tests, Questions,   }) =>
-  `# ${Title}
+`# ${Title}
 
-  ## Description
+## Description
+  
   ${Description}
 
-  ## Table of Contents:
+## Table of Contents
+  
   ${TableOfContents}
 
-  ## Installation:
+## Installation
+  
   ${Installation}
 
-  ## Usage:
+## Usage
+  
   ${Usage}
 
-  ## License
-  ${License}
+## Contribution
 
-  ## Contribution:
   ${Contributing}
  
-  ## Tests:
+## Tests
+  
   ${Tests}
 
-  ## FAQ:
+## FAQ
+
   ${Questions}
   
-  ## License:
+## License
+
   ${License}`;
 // TODO: Create a function to initialize app
 const init = () => {
